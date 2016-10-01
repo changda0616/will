@@ -1,23 +1,16 @@
-import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
-
+import { Component, OnInit, Input } from '@angular/core';
+import { DataService } from '../data.service';
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
+  @Input() item: any;
 
-  @Input()
-    item: any;
-  @Output() delete = new EventEmitter<any>();
-  constructor() { }
+  constructor(private datasvc:DataService ) {}
 
   ngOnInit() {
-  }
-
-  doDelete(item){
-    console.log(item);
-    this.delete.emit(item);
   }
 
 }

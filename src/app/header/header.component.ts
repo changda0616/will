@@ -17,4 +17,5 @@ export class HeaderComponent implements OnInit {
       this.title = this.title + "!";
     }
   }
+
 }

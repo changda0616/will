@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  keywords: string = 'test';
+  submit(keywords:string){
+      this.keywords = keywords;
+  }
 }

@@ -1,3 +1,6 @@
-.red {
+.warning {
   color:#ff0000;
+}
+.dialog {
+  color: #0000aa;
 }

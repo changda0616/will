@@ -44,8 +44,9 @@
           </div>
         </div>
         <!-- Search END -->
-
-        <!-- Calendar START -->
+        <div [ngSwitch]="keywords">
+          <div *ngSwitchCase="'1'">
+                          <!-- Calendar START -->
         <div class="widget calendar">
           <h4 class="widget-header">
               文章日曆
@@ -137,8 +138,9 @@
           </div>
         </div>
         <!-- Calendar END -->
-
-        <!-- CategoryList START -->
+          </div>
+          <div *ngSwitchCase="'2'">
+                      <!-- CategoryList START -->
         <div class="widget categorylist">
           <h4 class="widget-header">
               文章分類
@@ -164,7 +166,9 @@
         </div>
         <!-- CategoryList END -->
 
-        <!-- MVP START -->
+          </div>
+          <div *ngSwitchCase="'3'">
+                      <!-- MVP START -->
         <div class="widget textbox">
           <h4 class="widget-header">
               微軟最有價值專家
@@ -180,6 +184,10 @@
         </div>
         <!-- MVP END -->
 
+
+          </div>
+          <div *ngSwitchDefault>you r going to the wrong place</div>
+        </div>
       </div>
     </aside>
     <!-- Aside END -->

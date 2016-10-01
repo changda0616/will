@@ -10,12 +10,21 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
+  num: number = 10;
+
+
+
   changeTitle( $event: MouseEvent ){
     console.log($event);
+    this.num += 555;
     if($event.shiftKey){
       this.title = this.title + "!";
     }
   }
+  changeStyle(){
+    return { 'color' : "#"+this.num }
+  };
 
 }
